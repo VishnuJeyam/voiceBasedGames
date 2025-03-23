@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scream Go Game</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #222;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        canvas {
+            background-color: #333;
+            display: block;
+            margin: 0 auto;
+            border: 2px solid #fff;
+        }
+        #controls, #gameOverScreen {
+            text-align: center;
+            margin-top: 20px;
+        }
+        button {
+            background-color: #555;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #777;
+        }
+        #gameOverScreen {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas" width="800" height="600" style="background: url('background.png') no-repeat center center; background-size: cover;"></canvas>
+
+    <div id="controls">
+        <button onclick="startGame()">Start Game</button>
+        <button onclick="stopGame()">Stop Game</button>
+    </div>
+    <div id="gameOverScreen">
+        <h2>Game Over</h2>
+        <p>Your score: <span id="finalScore"></span></p>
+        <button onclick="retryGame()">Retry</button>
+    </div>
+    <div id="controls">
+        <label for="speedSlider">Game Speed:</label>
+        <input type="range" id="speedSlider" min="1" max="10" value="5">
+        <label for="thresholdSlider">Threshold Frequency:</label>
+        <input type="range" id="thresholdSlider" min="10" max="150" value="75">
+        <label for="gravitySlider">Gravity:</label>
+        <input type="range" id="gravitySlider" min="0.1" max="1" step="0.05" value="0.25">
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

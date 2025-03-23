@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice-Controlled Space Shooter</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        canvas {
+            display: block;
+            margin: 0 auto;
+            border: 2px solid #fff;
+            background-image: url('background.png'); /* Add your background image here */
+            background-size: cover; /* Adjust size of background image */
+        }
+        #controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+        button {
+            background-color: #555;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #777;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <div id="controls">
+        <button onclick="startGame()">Start Game</button>
+        <button onclick="stopGame()">Stop Game</button>
+        <div>
+            <label for="thresholdSlider">Threshold Frequency: <span id="thresholdDisplay">30</span></label>
+            <input type="range" id="thresholdSlider" min="0" max="100" value="30" oninput="updateThreshold(this.value)">
+        </div>
+    </div>
+    <!-- Audio elements -->
+    <audio id="backgroundMusic" loop>
+        <source src="background-music.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="laserSound">
+        <source src="laser-sound.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="gameOverSound">
+        <source src="game-over-sound.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <script src="app.js"></script>
+</body>
+</html>

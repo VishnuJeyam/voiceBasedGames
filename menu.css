@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #282c34;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.menu-container {
+    text-align: center;
+}
+
+.title-section {
+    margin-bottom: 50px;
+}
+
+.menu-logo {
+    width: 100px;
+    height: 100px;
+}
+
+.menu-title {
+    font-size: 36px;
+    margin: 20px 0;
+}
+
+.game-selection {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.game-option {
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.game-option:hover {
+    transform: scale(1.1);
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('background-image.jpg') no-repeat center center fixed; /* Add your background image here */
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.menu-container {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Adds a semi-transparent background to the menu */
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.title-section {
+    margin-bottom: 50px;
+}
+
+.menu-logo {
+    width: 100px;
+    height: 100px;
+}
+
+.menu-title {
+    font-size: 36px;
+    margin: 20px 0;
+}
+
+.game-selection {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.game-option {
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.game-option:hover {
+    transform: scale(1.1);
+}
+
+.game-logo {
+    width: 150px;
+    height: 150px;
+}
+
+.game-name {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.game-logo {
+    width: 150px;
+    height: 150px;
+}
+
+.game-name {
+    font-size: 24px;
+    margin-top: 10px;
+}
